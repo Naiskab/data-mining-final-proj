@@ -1,2 +1,2 @@
 # data-mining-final-project
-# readme
+# readme description
