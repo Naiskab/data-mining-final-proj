@@ -1,1 +1,1 @@
-# data-mining-final-proj
+# data-mining-final-project
