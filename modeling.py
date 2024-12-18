@@ -15,7 +15,7 @@ warnings.filterwarnings('ignore')
 train = pd.read_csv('train.csv')
 test = pd.read_csv('test.csv')
 
-
+# merge datasets
 df = pd.concat([train, test], axis=0)
 
 
