@@ -25,7 +25,7 @@ data = df.drop(columns=['Unnamed: 0', 'id'], errors='ignore')
 data.dropna(subset=['Arrival Delay in Minutes'], inplace=True)
 
 
- # Encode categorical variables
+ # Encode categorical variabless
 categorical_columns = ['Gender', 'Customer Type', 'Type of Travel', 'Class']
 label_encoders = {}
 for col in categorical_columns:
