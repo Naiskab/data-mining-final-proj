@@ -11,7 +11,7 @@ import seaborn as sns
 import warnings
 warnings.filterwarnings('ignore')
 
-
+#read data
 train = pd.read_csv('train.csv')
 test = pd.read_csv('test.csv')
 
