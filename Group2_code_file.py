@@ -148,7 +148,7 @@ fig.update_traces(
     customdata=['Gender', 'gender_percentage']
 )
 
-# Improve layout
+# Improving layout
 fig.update_layout(
     title=dict(x=0.5, xanchor="center"),  # Center the title
     width=1000,  # Adjust the width of the plot to make it wider
@@ -177,7 +177,7 @@ for column in numerical_columns:
     satisfied_mean = np.mean(satisfied_data)
     dissatisfied_mean = np.mean(dissatisfied_data)
 
-    # Create the figure
+    # Creating the figure
     fig = go.Figure()
 
     # Satisfied KDE with shaded area and mean line
@@ -253,7 +253,7 @@ fig = px.box(
     title='Distribution of Age Across Classes'
 )
 
-# Customize the layout
+# Customizing the layout
 fig.update_layout(
     title_font_size=20,
     title=dict(x=0.5, xanchor="center"),
