@@ -19,8 +19,8 @@ import warnings
 #%%
 warnings.filterwarnings('ignore')
 # %% [markdown]
-# ## Data Overview
-# **Gender:** Gender of the passengers (*Female*, *Male*)
+# # Data Overview
+# **Gender:** Gender of the passengers (Female, Male)
 #
 # **Customer Type:** The customer type (*Loyal customer*, *disloyal customer*)
 #
@@ -64,7 +64,7 @@ warnings.filterwarnings('ignore')
 #
 # **Arrival Delay in Minutes:** Minutes delayed when Arrival
 #
-# **Satisfaction:** Airline satisfaction level(*Satisfaction*, neutral or dissatisfaction)
+# **Satisfaction:** Airline satisfaction level(Satisfaction, neutral or dissatisfaction)
 # %%
 data1 = pd.read_csv('train.csv', index_col=0)
 data2 = pd.read_csv('test.csv', index_col=0)
