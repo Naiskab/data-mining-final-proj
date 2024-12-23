@@ -99,12 +99,12 @@ data['satisfaction_group'] = data['satisfaction'].apply(
     lambda x: 'Satisfied' if x == 'satisfied' else 'Neutral or Dissatisfied'
 )
 
-# Aggregate counts for satisfaction group and gender
+# Aggregating counts for satisfaction group and gender
 grouped_data = (
     data.groupby(['satisfaction_group', 'Gender']).size().reset_index(name='count')
 )
 
-# Calculate overall satisfaction group proportions (for bar heights)
+# Calculating overall satisfaction group proportions (for bar heights)
 total_counts = grouped_data.groupby('satisfaction_group')['count'].sum().reset_index(name='total')
 grouped_data = grouped_data.merge(total_counts, on='satisfaction_group')
 grouped_data['overall_percentage'] = grouped_data['total'] / grouped_data['total'].sum() * 100
