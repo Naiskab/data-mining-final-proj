@@ -131,7 +131,7 @@ fig.update_traces(
     marker_line=dict(width=0.5, color='black')  # Add thinner borders around bars
 )
 
-# Add annotations for percentages outside the bars
+# Adding annotations for percentages outside the bars
 for satisfaction_group, percentage in zip(total_counts['satisfaction_group'], total_counts['total'] / total_counts['total'].sum() * 100):
     fig.add_annotation(
         x=satisfaction_group,
@@ -142,7 +142,7 @@ for satisfaction_group, percentage in zip(total_counts['satisfaction_group'], to
         align="center"  # Align text in the center above the bar
     )
 
-# Add annotations for gender breakdown within each satisfaction group
+# Adding annotations for gender breakdown within each satisfaction group
 fig.update_traces(
     hovertemplate="<b>%{y}</b><br>Count: %{text}<br>Gender: %{customdata[0]}<br>Proportion: %{customdata[1]:.1f}%",
     customdata=['Gender', 'gender_percentage']
