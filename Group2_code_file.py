@@ -22,7 +22,7 @@ warnings.filterwarnings('ignore')
 # ## Data Overview
 # **Gender:** Gender of the passengers (*Female*, *Male*)
 #
-# **Customer Type:** The customer type (Loyal customer, disloyal customer)
+# **Customer Type:** The customer type (*Loyal customer*, disloyal customer)
 #
 # **Age:** The actual age of the passengers
 #
