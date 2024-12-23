@@ -479,17 +479,17 @@ for col in categorical_columns:
     label_encoders[col] = le
 #%%    
     
-# Encode the target variable
+# Encoding the target variable
 le_target = LabelEncoder()
 data['satisfaction'] = le_target.fit_transform(data['satisfaction'])  # 1: Satisfied, 0: Neutral or Dissatisfied
 
 #%%
 
-# Separate features and target variable
+# Separating features and target variable
 X = data.drop(columns=['satisfaction'])
 y = data['satisfaction']
 #%%
-# Standardize numerical features
+# Standardizing numerical features
 numerical_columns = ['Age', 'Flight Distance', 'Departure Delay in Minutes', 'Arrival Delay in Minutes']
 scaler = StandardScaler()
 X[numerical_columns] = scaler.fit_transform(X[numerical_columns])
@@ -498,7 +498,7 @@ X[numerical_columns] = scaler.fit_transform(X[numerical_columns])
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)
 
 #%%
-# Train a logistic regression model
+# Training a logistic regression model
 model = LogisticRegression(random_state=42)
 model.fit(X_train, y_train)
 model.fit(X_train, y_train)
