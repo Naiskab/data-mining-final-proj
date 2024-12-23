@@ -547,7 +547,7 @@ plt.ylabel('Density')
 plt.show()
 
 #%%
-# Evaluate the model
+# Evaluating the model
 report = classification_report(y_test, y_pred, output_dict=True)
 report_df = pd.DataFrame(report).transpose()
 
@@ -558,7 +558,7 @@ print(f"ROC-AUC: {roc_auc:.2f}")
 
 
 #%%
-# Display simplified classification report visually
+# Displaying simplified classification report visually
 report = classification_report(y_test, y_pred, output_dict=True)
 summary_metrics = {
     'Metric': ['Precision', 'Recall', 'F1-Score'],
@@ -570,7 +570,7 @@ summary_metrics = {
 }
 summary_df = pd.DataFrame(summary_metrics)
 
-# Plot classification report as bar chart
+# Plotting classification report as bar chart
 plt.figure(figsize=(8, 6))
 sns.barplot(x='Metric', y='Score', data=summary_df, palette='viridis')
 plt.title('Classification Report Metrics')
@@ -580,7 +580,7 @@ plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.show()
 
 #%%
-# Plot Enhanced ROC curve
+# Plotting Enhanced ROC curve
 fpr, tpr, thresholds = roc_curve(y_test, y_pred_proba)
 plt.figure(figsize=(10, 8))
 sns.set_theme(style="whitegrid")
