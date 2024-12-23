@@ -701,16 +701,16 @@ plt.show()
 
 cm = confusion_matrix(y_test, y_pred)
 
-# Normalize the confusion matrix to show percentages
+# Normalizing the confusion matrix to show percentages
 cm_percentage = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis] * 100
 
 # Plotting the confusion matrix
 plt.figure(figsize=(8, 6))
 
-# Set a refined style
+# Setting a refined style
 sns.set(style="whitegrid", palette="pastel")  
 
-# Create the heatmap with improved aesthetics
+# Creating the heatmap with improved aesthetics
 ax = sns.heatmap(cm_percentage, annot=True, fmt=".2f", cmap="coolwarm", 
                  cbar_kws={'label': 'Percentage'},
                  xticklabels=['Satisfied', 'Dissatisfied/Neutral'], 
