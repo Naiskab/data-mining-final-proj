@@ -369,13 +369,13 @@ fig.show()
 # %%
 travel_class_satisfaction_count = data.groupby(['satisfaction', 'Class']).size().unstack()
 
-# Convert to a DataFrame suitable for plotting
+# Converting to a DataFrame suitable for plotting
 df = travel_class_satisfaction_count.reset_index().melt(id_vars=['satisfaction'], var_name='Class', value_name='Count')
 
 df['Percentage'] = df.groupby('satisfaction')['Count'].transform(lambda x: 100 * x / x.sum())
 df['Percentage'] = df['Percentage'].round(2)  # Round to 2 decimals
 
-# Adjust 'Customer Type' values for proper labels
+# Adjusting 'Customer Type' values for proper labels
 df['satisfaction'] = df['satisfaction'].replace({'neutral or dissatisfied': 'Neutral or Dissatisfied'})
 df['satisfaction'] = df['satisfaction'].replace({'satisfied': 'Satisfied'})
 # Create the plot using Plotly
@@ -415,15 +415,15 @@ fig.show()
 # %%
 travel_class_count = data.groupby(['Type of Travel', 'Class']).size().unstack()
 
-# Convert to a DataFrame suitable for plotting
+# Converting to a DataFrame suitable for plotting
 df = travel_class_count.reset_index().melt(id_vars=['Type of Travel'], var_name='Class', value_name='Count')
 
 df['Percentage'] = df.groupby('Type of Travel')['Count'].transform(lambda x: 100 * x / x.sum())
 df['Percentage'] = df['Percentage'].round(2)  # Round to 2 decimals
 
-# Adjust 'Customer Type' values for proper labels
+# Adjusting 'Customer Type' values for proper labels
 df['Type of Travel'] = df['Type of Travel'].replace({'Business travel': 'Business Travel'})
-# Create the plot using Plotly
+# Creating the plot using Plotly
 fig = px.bar(
     df,
     x='Type of Travel',
