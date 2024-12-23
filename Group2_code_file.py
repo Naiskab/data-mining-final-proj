@@ -19,8 +19,8 @@ import warnings
 #%%
 warnings.filterwarnings('ignore')
 # %% [markdown]
-# # Data Overview
-# **Gender:** Gender of the passengers (Female, Male)
+# ## Data Overview
+# **Gender:** Gender of the passengers (*Female*, *Male*)
 #
 # **Customer Type:** The customer type (Loyal customer, disloyal customer)
 #
