@@ -64,7 +64,7 @@ warnings.filterwarnings('ignore')
 #
 # **Arrival Delay in Minutes:** Minutes delayed when Arrival
 #
-# **Satisfaction:** Airline satisfaction level(Satisfaction, neutral or dissatisfaction)
+# **Satisfaction:** Airline satisfaction level(*Satisfaction*, neutral or dissatisfaction)
 # %%
 data1 = pd.read_csv('train.csv', index_col=0)
 data2 = pd.read_csv('test.csv', index_col=0)
