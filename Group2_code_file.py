@@ -668,7 +668,7 @@ y_pred = model.predict(X_test)
 
 #%%
 
-# Evaluate the model
+# Evaluating the model
 report = classification_report(y_test, y_pred, output_dict=True)
 report_df = pd.DataFrame(report).transpose()
 cm = confusion_matrix(y_test, y_pred)
@@ -678,11 +678,11 @@ print(f"Accuracy: {accuracy:.2f}")
 
 #%%
 
-# Get feature importance
+# Getting feature importance
 feature_importance = model.feature_importances_
 feature_names = X_train.columns
 
-# Create a DataFrame for better visualization
+# Creating a DataFrame for better visualization
 importance_df = pd.DataFrame({
     'Feature': feature_names,
     'Importance': feature_importance
@@ -723,7 +723,7 @@ plt.title('Confusion Matrix', fontsize=18, weight='bold', color='black')
 plt.xlabel('Predicted Satisfaction', fontsize=15, weight='bold', color='black')
 plt.ylabel('True Satisfaction', fontsize=15, weight='bold', color='black')
 
-# Adjust tick parameters for better legibility
+# Adjusting tick parameters for better legibility
 plt.xticks(fontsize=13, rotation=0)
 plt.yticks(fontsize=13, rotation=0)
 plt.tight_layout()
